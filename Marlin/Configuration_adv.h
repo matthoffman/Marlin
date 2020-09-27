@@ -687,7 +687,10 @@
    * differs, a mode set eeprom write will be completed at initialization.
    * Use the option below to force an eeprom write to a V3.1 probe regardless.
    */
-  #define BLTOUCH_SET_5V_MODE
+  // The default is 5V, and it seems to work, but Antclabs recommends leaving it as OD / floating.
+  // Perhaps just because that is safer for the device when connected to a 3.3v system? This board is
+  // definitely feeding it 5V though. 
+  //#define BLTOUCH_SET_5V_MODE
 
   /**
    * Safety: Activate if connecting a probe with an unknown voltage mode.
